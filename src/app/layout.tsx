@@ -56,3 +56,33 @@ export default async function RootLayout({
     </html>
   );
 }
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { PROJECT_TITLE, PROJECT_DESCRIPTION, EMPIRE_BUILDER_URL } from "~/lib/constants";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: PROJECT_TITLE,
+  description: PROJECT_DESCRIPTION,
+  // Frame metadata
+  other: {
+    "fc:frame": "vNext",
+    "fc:frame:image": "https://placehold.co/1200x630/4338ca/ffffff?text=MySpace+Empire+Builder",
+    "fc:frame:button:1": "Visit Empire Builder",
+    "fc:frame:post_url": EMPIRE_BUILDER_URL,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}

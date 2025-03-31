@@ -106,3 +106,33 @@ export function useFrameSDK() {
     isInFrame,
   };
 }
+"use client";
+
+import { useEffect, useState } from "react";
+
+export function useFrameSDK() {
+  const [isSDKLoaded, setIsSDKLoaded] = useState(false);
+  const [sdk, setSdk] = useState<any>(null);
+
+  useEffect(() => {
+    const loadSDK = async () => {
+      try {
+        // Dynamically import the SDK to avoid SSR issues
+        const frameSdk = await import("@farcaster/frame-sdk");
+        setSdk(frameSdk.default);
+        
+        // Initialize the SDK
+        await frameSdk.default.context;
+        frameSdk.default.actions.ready();
+        
+        setIsSDKLoaded(true);
+      } catch (error) {
+        console.error("Failed to load Frame SDK:", error);
+      }
+    };
+
+    loadSDK();
+  }, []);
+
+  return { isSDKLoaded, sdk };
+}
