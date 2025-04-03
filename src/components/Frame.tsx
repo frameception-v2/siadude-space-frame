@@ -18,45 +18,50 @@ export default function Frame() {
   }
 
   return (
-    <div className="w-[300px] mx-auto py-2 px-2 bg-gradient-to-b from-blue-600 to-purple-700 border-4 border-dashed border-yellow-400 rounded-lg">
-      {/* MySpace Style Header */}
-      <div className="text-center mb-3 animate-pulse">
-        <div className="text-xl font-bold text-white bg-black p-1 rounded-md mb-1 shadow-lg">
-          ★彡 $HMBT EMPIRE 彡★
+    <div className="w-[300px] mx-auto py-2 px-2 bg-gradient-to-b from-amber-700 to-yellow-900 border-4 border-double border-amber-300 rounded-lg relative">
+      {/* Wild West Wanted Poster Style Header */}
+      <div className="text-center mb-3">
+        <div className="font-serif text-xl font-bold text-amber-200 p-1 mb-1 shadow-lg" style={{textShadow: "2px 2px 0px #000"}}>
+          🤠 WANTED: $HMBT OUTLAWS 🤠
         </div>
-        <div className="text-xs text-white bg-black bg-opacity-70 p-1 rounded-md italic">
-          ♪♫•*¨*•.¸¸♥ @siadude's profile ♥¸¸.•*¨*•♫♪
+        <div className="font-serif text-xs text-amber-100 p-1 italic" style={{textShadow: "1px 1px 0px #000"}}>
+          Sheriff @siadude's Hambone Territory
         </div>
       </div>
 
-      {/* Glittery Content */}
+      {/* Wanted Poster Content */}
       <div 
-        className="bg-black bg-opacity-80 p-3 rounded-md border-2 border-pink-500 shadow-lg text-center mb-3"
+        className="bg-amber-100 bg-opacity-90 p-3 rounded-md border-2 border-amber-800 shadow-lg text-center mb-3 relative"
+        style={{backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBvcGFjaXR5PSIwLjEiPjxwYXRoIGQ9Ik0wIDBoNDB2NDBoLTQweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDBoMTB2MTBoLTEwek0xMCAxMGgxMHYxMGgtMTB6TTAgMjBoMTB2MTBoLTEwek0yMCAwaDEwdjEwaC0xMHpNMTAgMjBoMTB2MTBoLTEwek0zMCAxMGgxMHYxMGgtMTB6TTIwIDIwaDEwdjEwaC0xMHpNMzAgMzBoMTB2MTBoLTEweiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==')"}}
       >
-        <p className="text-white font-bold mb-2 text-lg">
-          🏆 Build Your Empire 🏆
+        <div className="absolute top-0 left-0 w-full h-full bg-amber-100 opacity-70 -z-10"></div>
+        <p className="font-serif text-amber-950 font-bold mb-2 text-lg">
+          🦴 HAMBONE EMPIRE 🦴
         </p>
-        <p className="text-yellow-300 text-sm mb-3">
-          Guardian: <span className="text-pink-300">siadude</span>
+        <p className="font-serif text-amber-800 text-sm mb-3">
+          Bounty Hunter: <span className="text-amber-950 font-bold">siadude</span>
         </p>
-        <p className="text-green-300 text-xs mb-2">
-          Distributed: $212 | Burned: 20.57M hmbt
+        <p className="font-serif text-amber-700 text-xs mb-2">
+          Reward: $212 | Bones Buried: 20.57M hmbt
         </p>
       </div>
 
       {/* Action Button */}
       <button 
         onClick={handleOpenUrl}
-        className="w-full bg-gradient-to-r from-red-500 to-yellow-500 hover:from-yellow-500 hover:to-red-500 text-white font-bold py-2 px-4 rounded-full border-2 border-white shadow-lg transform hover:scale-105 transition-all"
+        className="w-full bg-amber-800 hover:bg-amber-700 text-amber-200 font-serif font-bold py-2 px-4 rounded-sm border-2 border-amber-300 shadow-lg transform hover:scale-105 transition-all"
+        style={{textShadow: "1px 1px 0px #000"}}
       >
-        ✨ VISIT MY EMPIRE ✨
+        🦴 CLAIM YER BOUNTY 🦴
       </button>
 
-      {/* MySpace Footer */}
-      <div className="text-center mt-3 text-xs text-white">
-        <p className="animate-bounce">⋆｡°✩ Thanks for visiting! ✩°｡⋆</p>
-        <p className="text-[10px] mt-1 text-gray-300">
-          ©️ 2025 | Last login: 3/31/25
+      {/* Wild West Footer */}
+      <div className="text-center mt-3 text-xs text-amber-200">
+        <p className="animate-pulse font-serif" style={{textShadow: "1px 1px 0px #000"}}>
+          ⭐ Ride on, partner! ⭐
+        </p>
+        <p className="text-[10px] mt-1 text-amber-100 font-serif">
+          Est. 1875 | Last seen: High Noon, 4/3/25
         </p>
       </div>
     </div>
